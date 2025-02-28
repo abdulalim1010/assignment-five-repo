@@ -13,17 +13,17 @@
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-slate-100">
   <header>
-    <nav class="flex justify-between mt-5 p-8 bg-white h-20">
+    <nav class="flex justify-between items-center mt-5 p-8 bg-white h-20">
       <div class="flex">
         <div><img src="assets/logo.png" alt=""></div>
         <div class="text-3xl">Dev<span class="text-3xl font-bold">Board</span></div>
       </div>
       <div class="flex gap-6">
         <div><img src="assets/checkbox.png" alt=""></div>
-        <div>24</div>
-        <div><img src="assets/theme-btn.png" alt=""></div>
+        <div class="text-3xl font-bold">24</div>
+        <div id="color-change"><img src=" assets/theme-btn.png" alt=""></div>
       </div>
     </nav>
     <!-- main part -->
@@ -31,12 +31,12 @@
 
 
   </header>
-  <main class="mt-10 bg-white">
+  <main class="mt-10 ">
     <div class="mt-5 flex">
 
       <!-- first-3 part -->
       <div class=" flex justify-around">
-        <div class="w-5/6">
+        <div class="w-7/8">
           <div class="flex gap-3 ">
 
 
@@ -81,7 +81,7 @@
 
           </div>
           <div class="grid grid-cols-3 gap-7 mt-7 ">
-
+            <!-- section1 -->
             <section class="p-4 space-y-3 bg-blue-100 rounded">
               <p class="bg-white w-32 rounded p-3">ShopEase</p>
               <h3 class="text-2xl font-medium">Fix Mobile Button Issue</h3>
@@ -92,13 +92,13 @@
                   <p>Deadline</p>
                   <h4 class="text-2xl font-semibold">21 March 2025</h4>
                 </div>
-                <div><button class="btn btn-primary">Completed</button></div>
+                <div><button id="first-btn" class="btn btn-primary">Completed</button></div>
               </div>
 
 
             </section>
             <section class="p-4 space-y-3 bg-blue-100 rounded">
-              <p class="bg-white w-32 rounded p-3">ShopEase</p>
+              <p class="bg-white w-32 rounded p-3">SwiftPay</p>
               <h3 class="text-2xl font-medium">Add Dark Mode</h3>
               <p class="bg-white rounded-xl  p-5">Store the user's preference in localStorage, </p>
               <div class="flex gap-x-1 items-center justify-center">
@@ -114,7 +114,7 @@
             </section>
             <section class="p-4 space-y-3 bg-blue-100 rounded">
               <p class="bg-white w-32 rounded p-3">ShopEase</p>
-              <h3 class="text-2xl font-medium">Fix Mobile Button Issue</h3>
+              <h3 class="text-2xl font-medium">Optimize Home page </h3>
               <p class="bg-white rounded-xl  p-5">Debug using Chrome DevTools, check for overlappi</p>
               <div class="flex gap-x-1 items-center justify-center">
                 <div>
@@ -128,8 +128,8 @@
 
             </section>
             <section class="p-4 space-y-3 bg-blue-100 rounded">
-              <p class="bg-white w-32 rounded p-3">ShopEase</p>
-              <h3 class="text-2xl font-medium">Fix Mobile Button Issue</h3>
+              <p class="bg-white w-32 rounded p-3">Meta</p>
+              <h3 class="text-2xl font-medium">Add new emoji 🤲</h3>
               <p class="bg-white rounded-xl  p-5">Debug using Chrome DevTools, check for overlappi</p>
               <div class="flex gap-x-1 items-center justify-center">
                 <div>
@@ -143,8 +143,8 @@
 
             </section>
             <section class="p-4 space-y-3 bg-blue-100 rounded">
-              <p class="bg-white w-32 rounded p-3">ShopEase</p>
-              <h3 class="text-2xl font-medium">Fix Mobile Button Issue</h3>
+              <p class="bg-white w-32 rounded p-3">Google LLC</p>
+              <h3 class="text-2xl font-medium">Integrate OpenAI API</h3>
               <p class="bg-white rounded-xl  p-5">Debug using Chrome DevTools, check for overlappi</p>
               <div class="flex gap-x-1 items-center justify-center">
                 <div>
@@ -158,8 +158,8 @@
 
             </section>
             <section class="p-4 space-y-3 bg-blue-100 rounded">
-              <p class="bg-white w-32 rounded p-3">ShopEase</p>
-              <h3 class="text-2xl font-medium">Fix Mobile Button Issue</h3>
+              <p class="bg-white w-32 rounded p-3">Glassdoar</p>
+              <h3 class="text-2xl font-medium">Improve Job searching</h3>
               <p class="bg-white rounded-xl  p-5">Debug using Chrome DevTools, check for overlappi</p>
               <div class="flex gap-x-1 items-center justify-center">
                 <div>
@@ -177,8 +177,17 @@
         </div>
 
       </div>
-      <div class="bg-black mt-10 w-auto mr-4">
-        <h1>jsadhfsldkjhgrth jk krtu</h1>
+      <div class="bg-white pl-5 pt-3 mr-4 mt-10 w-max">
+        <div class="flex gap-2">
+          <div>
+            <img src="assets/activity.png" alt="">
+          </div>
+          <div>
+            <h6 class="text-2xl"> Activity Log </h6>
+          </div>
+        </div>
+
+        <button id="" class="btn btn-primary">Clear History</button>
       </div>
     </div>
 
@@ -188,8 +197,14 @@
 
     </div>
   </main>
+  <script>
+    document.getElementById('first-btn').addEventListener('click', function click() {
+      alert('board update sucessfully')
+      document.getElementById('first-btn').disabled = true;
+    });
 
-
+  </script>
+  <script src="js/color.js"></script>
 </body>
 
 </html>
