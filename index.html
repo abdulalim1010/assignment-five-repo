@@ -53,7 +53,7 @@
 
             </div>
 
-            <div class="flex mt-5 justify-center items-center bg-blue-100 rounded-xl h-40  w-auto mr-2">
+            <div id="calander" class="flex mt-5 justify-center items-center bg-blue-300 rounded-xl h-40  w-auto mr-2">
               <div><img src="assets/board.png" alt=""></div>
               <div class="text-center">
                 <p>Discover Something <br> New Today!</p>
@@ -177,18 +177,20 @@
         </div>
 
       </div>
-      <div class="bg-white pl-5 pt-3 mr-4 mt-10 w-max">
-        <div class="flex gap-2">
-          <div>
-            <img src="assets/activity.png" alt="">
+      <section id="history" class="bg-white pl-5 pt-3 mr-4 mt-10 w-72">
+        <div>
+          <div class="flex gap-2">
+            <div>
+              <img src="assets/activity.png" alt="">
+            </div>
+            <div>
+              <h6 class="text-2xl"> Activity Log </h6>
+            </div>
           </div>
-          <div>
-            <h6 class="text-2xl"> Activity Log </h6>
-          </div>
-        </div>
 
-        <button id="history" class="btn btn-primary">Clear History</button>
-      </div>
+          <button id="history-clear" class="btn btn-primary">Clear History</button>
+        </div>
+      </section>
     </div>
 
 
@@ -198,57 +200,13 @@
     </div>
   </main>
 
-  <script>
-    // This function creates a new history comment item
-    function addHistoryComment(comment) {
-      // Create a new list item element
-      const li = document.createElement("li");
-      li.classList.add("history-item", "p-2", "bg-gray-100", "my-2", "rounded");
-
-      // Add the comment text to the list item
-      li.textContent = comment;
-
-      // Append the new history item to the history list
-      document.getElementById("comment-history").appendChild(li);
-    }
-
-    // Attach event listeners to each button
-    document.getElementById("first-btn").addEventListener("click", function () {
-      addHistoryComment("Task 'Fix Mobile Button Issue' completed!");
-    });
-
-    document.getElementById("second-btn").addEventListener("click", function () {
-      addHistoryComment("Task 'Add Dark Mode' completed!");
-    });
-
-    document.getElementById("third-btn").addEventListener("click", function () {
-      addHistoryComment("Task 'Optimize Home page' completed!");
-    });
-
-    document.getElementById("four-btn").addEventListener("click", function () {
-      addHistoryComment("Task 'Add new emoji 🤲' completed!");
-    });
-
-    document.getElementById("five-btn").addEventListener("click", function () {
-      addHistoryComment("Task 'Integrate OpenAI API' completed!");
-    });
-
-    document.getElementById("six-btn").addEventListener("click", function () {
-      addHistoryComment("Task 'Improve Job searching' completed!");
-    });
-
-    // Optional: Clear the history when the "Clear History" button is clicked
-    document.getElementById("history").addEventListener("click", function () {
-      document.getElementById("comment-history").innerHTML = "";
-    });
-  </script>
-
 
 
   <script src="history.js"></script>
   <script src="utility.js"></script>
   <script src="first.js"></script>
   <script src="js/color.js"></script>
+  <script src="question.js"></script>
 </body>
 
 </html>
