@@ -56,7 +56,6 @@ document.getElementById('history').addEventListener('click', function() {
   alert('History button clicked!');
 });
 
-// Optional: Disable the buttons initially (if you want to disable them before any task completion)
 function disableButtons() {
   const buttons = document.querySelectorAll('#first-btn, #second-btn, #third-btn, #four-btn, #five-btn, #six-btn');
   buttons.forEach(button => {

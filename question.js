@@ -1,3 +1,3 @@
 document.getElementById('calander').addEventListener('click', function () {
-  window.location.href="./answe.html"
+  window.location.href="./answer.html"
 })
